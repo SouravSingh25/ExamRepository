@@ -1,21 +1,16 @@
 package com.capgemini.exam.exception;
 
 public class IDException extends Exception {
-	/*************************************************
-	 * @author: Sourav Singh
-	 * 
-	 * @description: creating a IDException class
-	 * and its constructors
-	 **********************************************/
-
-	public IDException() {
+/********************************************************************
+ * @author: Sourav Singh
+ * @description: creating a IDException class
+ * and its constructors
+ ********************************************************************/
+   public IDException() {
 		super();
-		
 	}
-
-	public IDException(String arg0) {
+   
+    public IDException(String arg0) {
 
 	}
-	
-
 }

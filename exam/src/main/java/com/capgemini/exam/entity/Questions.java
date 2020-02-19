@@ -1,18 +1,15 @@
 package com.capgemini.exam.entity;
 
 import java.util.Arrays;
+
 /*************************************************************
  * @author Sourav Singh 
- * 
  * @description: Creating a Question class
- * 
  *************************************************************/
-
 public class Questions {
 	
 	/**********************************************************
 	 * @description: provide the fields for Question class
-	 * 
 	 **********************************************************/
 	private Integer questionId;
 	private String questionTitle;
@@ -22,7 +19,6 @@ public class Questions {
 	
 	/**********************************************************
 	 * @description: provide the constructor using fields
-	 * 
 	 **********************************************************/
 	public Questions(Integer questionId, String questionTitle, String[] questionOptions, String questionAnswer,
 			int questionMarks) {
@@ -34,17 +30,17 @@ public class Questions {
 		this.questionMarks = questionMarks;
 		
 	}
+	
 	/**********************************************************
 	 * @description: provide the no-argument constructor
-	 * 
 	 **********************************************************/
 	public Questions() {
 		
 	}
 	
 	/**********************************************************
-	 * @description: provide the getters and setters
-	 * 
+	 * @description: provide the getters and setters using all
+	 * the fields of Question class
 	 **********************************************************/
 	public Integer getQuestionId() {
 		return questionId;
@@ -80,7 +76,6 @@ public class Questions {
 	
 	/**********************************************************
 	 * @description: Override toString() using fields
-	 * 	  
 	 **********************************************************/
 	@Override
 	public String toString() {

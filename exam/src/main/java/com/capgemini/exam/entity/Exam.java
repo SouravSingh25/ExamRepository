@@ -1,21 +1,16 @@
 package com.capgemini.exam.entity;
 
-import java.math.BigDecimal;
-
-/*************************************************************
- * @author Sourav Singh 
- * 
- * @description: Creating a Exam class
- * 
- *************************************************************/
 import java.util.HashMap;
 import java.util.Map;
 
+/*************************************************************
+ * @author Sourav Singh 
+ * @description: Creating a Exam class
+ *************************************************************/
 public class Exam {
 	
 	/**********************************************************
-	 * @description: provide the fields for Exam class
-	 * 
+	 * @description: provide the fields of Exam class
 	 **********************************************************/
 	private  Integer testId;
 	private  String testName;
@@ -24,7 +19,6 @@ public class Exam {
 	
 	/**********************************************************
 	 * @description: provide the constructor using fields
-	 * 
 	 **********************************************************/
 	public Exam(Integer testId, String testName, Integer totalMarks) {
 		super();
@@ -36,15 +30,14 @@ public class Exam {
 
 	/**********************************************************
 	 * @description: provide the no-argument constructor
-	 * 
 	 **********************************************************/
 	public Exam() {
 		
 	}
 	
 	/**********************************************************
-	 * @description: provide the getters and setters
-	 * 
+	 * @description: provide the getters and setters using
+	 * all the fields of Exam class 
 	 **********************************************************/
 	public Map<Integer, Questions> getQmap() {
 		return qmap;
@@ -72,13 +65,10 @@ public class Exam {
 	}
 	
 	/**********************************************************
-	 * @description: Override toString() using fields
-	 * 	  
+	 * @description: Override toString() using fields 
 	 **********************************************************/
 	@Override
 	public String toString() {
-		return "Test testId=" + testId + ", testName=" + testName + ", totalMarks=" + totalMarks + ", qmap=" + qmap;
+		return "Test testId=" + testId + ", testName=" + testName + ", totalMarks=" + totalMarks ;
 	}
-	
-
 }

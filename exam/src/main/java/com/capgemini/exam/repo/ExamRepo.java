@@ -1,31 +1,25 @@
 package com.capgemini.exam.repo;
 
-import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.capgemini.exam.entity.Questions;
 import com.capgemini.exam.entity.Exam;
+import com.capgemini.exam.entity.Questions;
 
-
+/***************************************************************
+ * @author : Sourav Singh
+ * @description: Creating the repository class
+ ***************************************************************/
 public class ExamRepo {
 	/*******************************************************************
-	 * @author Sourav Singh
-	 * 
 	 * @description: Creating a Map for Exam in which
 	 * it is getting key as a Integer and value as an Exam instances
-	 * 
 	 *******************************************************************/
-	
 	public static Map<Integer, Exam> tmap = new HashMap<Integer, Exam>();
 
-	
 	static {
-		/***************************************************************
-		 * @author Sourav Singh
-		 * 
+		/*************************************************************** 
 		 * @description: Adding Exam  and put into the map reference
-		 * 
 		 ***************************************************************/
 		Exam test1=new Exam(1001,"Test1",8);
 		Exam test2=new Exam(1002,"Test2",7);
@@ -34,11 +28,8 @@ public class ExamRepo {
 		tmap.put(test2.getTestId(), test2);	
 		
 		
-		/***************************************************************
-		 * @author Sourav Singh
-		 * 
+		/****************************************************************
 		 * @description: Creating the options for the questions
-		 * 
 		 ***************************************************************/
 		String[] arr1= {"1.AbstractLis","2.LinkedList","3.ArrayList","4.None of these"};
 		String[] arr2= {"1.ArrayList()","2.DynamicList()","3.LinkedList()","4. MallocList()"};
@@ -56,15 +47,11 @@ public class ExamRepo {
 		String[] arr14= {"1.Math","2.System","3.Object","4.Process"};
 		String[] arr15= {"1.Class","2.Object","3.System","4.Runtime"};
 		
-		/***************************************************************
-		 * @author Sourav Singh
-		 * 
-		 * @description: Adding Questions and Creating a Map 
+		/*********************************************************************
+		 * @description: Adding Questions and Creating a Map ,
 		 *  Map is for getting the key as a Integer and 
 		 *  value as a question instance
-		 * 
-		 ***************************************************************/
-		
+		 ********************************************************************/
 		Questions ques1=new Questions(1,"Which of these standard collection classes implements a dynamic array?",arr1,"ArrayList",1);
 		Questions ques2=new Questions(2,"Which of these class can generate an array which can increase and decrease in size automatically?",arr2,"ArrayList()",1);
 		Questions ques3=new Questions(3,"Which of these method can be used to increase the capacity of ArrayList object manually?",arr3,"ensureCapacity()",1);
@@ -82,7 +69,11 @@ public class ExamRepo {
 		Questions ques15=new Questions(15,"Which of these class encapsulate the runtime state of an object or an interface?",arr15,"Class",1);
 		
 		Map<Integer,Questions> qmap=new HashMap<Integer,Questions>();
-
+		
+		/************************************************************************
+		 * @description: we are putting the value of questions to the
+		 * question reference...
+		 ************************************************************************/
 		qmap.put(ques1.getQuestionId(), ques1);
 		qmap.put(ques2.getQuestionId(), ques2);
 		qmap.put(ques3.getQuestionId(), ques3);
@@ -91,8 +82,7 @@ public class ExamRepo {
 		qmap.put(ques6.getQuestionId(), ques6);
 		qmap.put(ques7.getQuestionId(), ques7);
 		qmap.put(ques8.getQuestionId(), ques8);
-		
-		
+				
 		Map<Integer,Questions> qmap2=new HashMap<Integer,Questions>();
 		qmap2.put(ques9.getQuestionId(), ques9);
 		qmap2.put(ques10.getQuestionId(), ques10);
@@ -103,16 +93,10 @@ public class ExamRepo {
 		qmap2.put(ques15.getQuestionId(), ques15);
 		
 		/**********************************************************************
-		 * @author Sourav Singh
-		 * 
 		 * @description:Assigning the set of questions to the different tests 
-		 * 
 		 **********************************************************************/
-		
 		test1.setQmap(qmap);
 		test2.setQmap(qmap2);
-		
-		
-	}
 	
+	}
 }

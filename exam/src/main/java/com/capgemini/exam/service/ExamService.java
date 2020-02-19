@@ -14,7 +14,7 @@ public interface ExamService {
 	 *  and getting support from the Dao Layer
 	 *  @Method: addQuestion()
 	 *  @return : boolean
-	 *  @throws :  IDException, ValidationException
+	 *  @throws : IDException, ValidationException
 	 *  @param1: testId
 	 *  @param2: question
 	 * 
